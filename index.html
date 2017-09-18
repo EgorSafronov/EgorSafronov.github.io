@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Здесь может быть ваша реклама
+    </title>
+
+    <style>
+        body {
+            zoom: 90%;
+            background-size: 100% auto;
+        }
+        
+        #myCanvas {
+            position: absolute;
+            left: 20%;
+            top: 20%;
+        }
+        
+        .block {
+            width: 200px;
+            padding: 5px;
+        }
+        
+        #stop,
+        #start,
+        #pause {
+            outline: none;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+
+<body background="background.jpg">
+
+    <h1 align="center">
+        <font color="#00008B" size="8"> Сортировка слиянием </font>
+    </h1>
+
+    <div class="block">
+        <p>
+            <font color="#00008B" size="5"> Управление: </font>
+        </p>
+        <p>
+            <input type="text" id="input_mas" placeholder="Введите числа">
+        </p>
+        <p>
+            <button id="create">Создать новый массив</button>
+        </p>
+        <p>
+            <button id="random">Случайный массив</button>
+        </p>
+        <p>
+            <font color="#00008B" size="4"> Могут использоваться двузначные целые числа(не более 16 чисел). Некорректные данные будут проигнорированы </font>
+        </p>
+        <p>
+            <font color="#00008B" size="4"> Скорость выполнения алгоритма </font>
+        </p>
+        <input type="range" min='-2' max='2' step='1' value="0" id="speed_factor">
+        <p>
+            <input type="image" img id="stop" src="stopdis.png" title="Сброс">
+            <input type="image" img id="start" src="startdis.png" title="Старт">
+            <input type="image" img id="pause" src="pausedis.png" title="Пауза" disabled>
+        </p>
+    </div>
+    <canvas align=center id="myCanvas" width="1000" height="500" style="border:2px solid #000000;">
+</canvas>
+
+    <script src="script.js" charset="UTF-8"></script>
+</body>
+
+</html>
